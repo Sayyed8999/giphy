@@ -1,4 +1,5 @@
 <div class="container">
+    <!-- iterating pageditems using ngfor directive -->
     <div *ngFor="let items of pagedItems">
         <div
             *ngIf="receivedSearchedValue ==='' || items.title.toLowerCase().includes(receivedSearchedValue | lowercase)">
@@ -7,6 +8,9 @@
         </div>
 
     </div>
+
+    
+    <!-- buttons for pagination -->
     <div style="font-size: 20px;" class="pagination" *ngIf="numberOfPages!==undefined">
         <button class="buttons" (click)="previousPage()"> << </button>
         {{currentPage+" of "+numberOfPages}}

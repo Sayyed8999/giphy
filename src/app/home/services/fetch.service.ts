@@ -11,8 +11,8 @@ export class FetchService {
 
   headers = new HttpHeaders()
     .set('content-type', 'application/json')
-
+// Method for Getting the data from the api.
   getTrendingGifs(apiKey: string, limit = 30) {
-    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}`, { 'headers': this.headers });
+    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}`,{ 'headers': this.headers });
   }
 }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
 import { SendSearchValueService } from '../services/send-search-value.service'
 
 @Component({
@@ -11,8 +10,10 @@ export class SearchGifsComponent {
   public srchedvalue: string = '';
 
   constructor(private SendSearchValueService: SendSearchValueService) { }
+  
+  // Sending searched value to subject in order to use it in the Display component using keyup event
   SearchedValue() {
-    this.SendSearchValueService.updateValue(this.srchedvalue);
+    this.SendSearchValueService.Getsearchvalue(this.srchedvalue);
   }
 
 
