@@ -1,1 +1,16 @@
-<p>display-gifs works!</p>
+<div class="container">
+    <div *ngFor="let items of pagedItems">
+        <div
+            *ngIf="receivedSearchedValue ==='' || items.title.toLowerCase().includes(receivedSearchedValue | lowercase)">
+            <img [src]="items.images.downsized_medium.url">
+            <h5>{{items.title}}</h5>
+        </div>
+
+    </div>
+    <div style="font-size: 20px;" class="pagination" *ngIf="numberOfPages!==undefined">
+        <button class="buttons" (click)="previousPage()"> << </button>
+        {{currentPage+" of "+numberOfPages}}
+        <button class="buttons" (click)="nextPage()">>></button>
+    </div>
+
+</div>

@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class FetchService {
 
-  constructor() { }
+  baseurl: string = 'https://api.giphy.com/v1/gifs/trending'
+  constructor(private http: HttpClient) { }
+
+  headers = new HttpHeaders()
+    .set('content-type', 'application/json')
+
+  getTrendingGifs(apiKey: string, limit = 30) {
+    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}`, { 'headers': this.headers });
+  }
 }

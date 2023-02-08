@@ -1,0 +1,46 @@
+.container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 3rem;
+    width: 70%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 1.5rem;
+    padding: 3%;
+    background: #000;
+    border-radius: 0.6rem;
+
+    img {
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.3rem;
+        box-sizing: border-box;
+        box-shadow: rgba(102, 102, 102, 0.84) 0px 7px 29px 0px;
+    }
+
+    h5 {
+        color: white;
+    }
+    .pagination {
+        position: absolute;
+        top: 90%;
+        left: 35%;
+        color: white;
+        margin-bottom: 0;
+    
+        .buttons {
+            width: 5rem;
+            height: 2.3rem;
+            background-color: black;
+            color: white;
+            margin-left: 5px;
+            border: 1px solid yellow;
+            border-radius: 5px;
+    
+        }
+    }
+}
+

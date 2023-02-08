@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DisplayGifsComponent } from './display-gifs/display-gifs.component';
 import { SearchGifsComponent } from './search-gifs/search-gifs.component';
 
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { SearchGifsComponent } from './search-gifs/search-gifs.component';
     SearchGifsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     DisplayGifsComponent,

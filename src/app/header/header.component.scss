@@ -1,0 +1,12 @@
+.container{
+    background-color: black;
+    color: white;
+    height: 60px;
+    .heading{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding-top: 5px;
+        cursor: pointer;
+       }
+}
