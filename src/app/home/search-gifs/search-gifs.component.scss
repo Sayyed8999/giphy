@@ -1,0 +1,20 @@
+.container{
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-Box{
+        width: 60%;
+        height: 1.9rem;
+}
+.search-button{
+    width: 5rem;
+    height: 2.3rem;
+    background-color: black;
+    color: white;
+    margin-left: 5px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+
+}
